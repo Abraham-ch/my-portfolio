@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Home from "./Pages/Home";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App dark:bg-neutral-900 bg-slate-100">
+      <Analytics />
       <nav className=" px-6 max-w-5xl mx-auto rounded-lg shadow-md backdrop-blur-2xl -m-b-4 sticky top-0 z-50">
         <div className="flex h-16 items-center justify-between">
           <button className="rounded p-1 -ml-1 text-slate-500 hover:text-slate-100 hover:bg-blue-950 dark:hover:bg-yellow-400 dark:hover:text-white dark:text-yellow-500 focus:ring-2 focus:ring-slate-50 transition-colors">
