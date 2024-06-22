@@ -14,9 +14,9 @@ export default function Home() {
                 Abraham <br />
                 Chafloque Arias
               </h1>
-              <h2 className="px-5 py-3 text-2xl font-bold text-blue-950 dark:text-yellow-400">
+              <div className="px-5 py-3 text-2xl font-bold text-blue-950 dark:text-yellow-400">
                 Fronted Developer - Student - 🇵🇪
-              </h2>
+              </div>
               <p className="px-5 py-3 text-slate-700 max-w-2xl dark:text-gray-200">
                 I'm a Physical engineering student and an enthusiastic in web
                 development currently improving my skills in HTML, CSS,
@@ -26,6 +26,7 @@ export default function Home() {
               <div className="flex ml-4 gap-2 pt-2">
                 <a
                   href="https://www.linkedin.com/in/abraham-chafloque-arias-049384220/"
+                  title="Linkedin"
                   target="_blank"
                 >
                   <svg
@@ -46,7 +47,7 @@ export default function Home() {
                   </svg>
                 </a>
 
-                <a href="mailto:ascaytaos@gmail.com">
+                <a href="mailto:ascaytaos@gmail.com" title="email to">
                   <svg
                     className="transition-all hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-yellow-400 w-9 h-auto"
                     viewBox="0 0 24 24"
@@ -61,7 +62,11 @@ export default function Home() {
                     <path d="M3 7l9 6l9 -6" />
                   </svg>
                 </a>
-                <a href="https://github.com/Abraham-ch" target="_blank">
+                <a
+                  href="https://github.com/Abraham-ch"
+                  target="_blank"
+                  title="Github"
+                >
                   <svg
                     className="transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-yellow-400 w-9 h-auto"
                     viewBox="0 0 24 24"
@@ -79,9 +84,10 @@ export default function Home() {
             </div>
 
             <img
-              className="rounded-full w-2/3 h-auto sm:h-72 sm:w-auto my-4"
-              src="https://pbs.twimg.com/profile_images/1413402247946514432/L_UgbAiI_400x400.jpg"
-              alt="Abraham"
+              className="rounded-full w-2/3 border-4 border-blue-950 dark:border-yellow-400 h-auto sm:h-72 sm:w-auto my-4"
+              src="../src/img/perfil.jpg"
+              alt="Abraham Chafloque Arias"
+              title="Abraham Chafloque"
             />
           </section>
 
@@ -109,6 +115,7 @@ export default function Home() {
                   target="_blank"
                   href="https://github.com/Abraham-ch/Breath-project/blob/main/InformeFinal_Digitales_Calle_Chafloque.pdf"
                   className="border-solid dark:border-white border-black border-2 px-2 py-1 md:py-2 md:px-4 text-xs md:text-base rounded-full inline-flex justify-center items-center transition hover:scale-105 dark:text-gray-200 dark:hover:text-yellow-400 dark:hover:border-yellow-400 hover:text-sky-800 hover:border-sky-800"
+                  title="IoT air quality development Github ref"
                 >
                   See more
                   <svg
@@ -158,6 +165,7 @@ export default function Home() {
                 className="object-cover"
                 src="https://www.tooltyp.com/wp-content/uploads/2019/03/1920x600-desarrollo-web.jpg"
                 alt="me"
+                title="Proyecto 1"
               />
               <div className="absolute h-full w-full bg-black/20 flex flex-col items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 gap-y-5 sm:gap-y-0">
                 <h3 className="text-2xl text-white font-bold">Proyecto 1</h3>
@@ -167,7 +175,11 @@ export default function Home() {
                   error. Harum veniam quidem voluptatum ipsam sunt, sit velit
                   temporibus vel provident nostrum soluta?
                 </p>
-                <a className="bg-black text-white py-2 px-5" href="$">
+                <a
+                  className="bg-black text-white py-2 px-5"
+                  href="#"
+                  title="Proyecto 1"
+                >
                   {" "}
                   See more{" "}
                 </a>
@@ -178,7 +190,8 @@ export default function Home() {
               <img
                 className="object-cover h-full"
                 src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="1"
+                alt="Proyecto 2"
+                title="Proyecto 2"
               />
               <div className="absolute h-full w-full bg-black/20 flex flex-col items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 gap-y-5 sm:gap-y-0">
                 <h3 className="text-2xl text-white font-bold">Proyecto 2</h3>
@@ -188,7 +201,11 @@ export default function Home() {
                   error. Harum veniam quidem voluptatum ipsam sunt, sit velit
                   temporibus vel provident nostrum soluta?
                 </p>
-                <a className="bg-black text-white py-2 px-5" href="$">
+                <a
+                  className="bg-black text-white py-2 px-5"
+                  href="#"
+                  title="Proyecto 2"
+                >
                   {" "}
                   See more{" "}
                 </a>
@@ -199,7 +216,8 @@ export default function Home() {
               <img
                 className="object-cover"
                 src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="1"
+                alt="Proyecto 3"
+                title="Proyecto 3"
               />
               <div className="absolute h-full w-full bg-black/20 flex flex-col items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 gap-y-5 sm:gap-y-0">
                 <h3 className="text-2xl text-white font-bold">Proyecto 3</h3>
@@ -209,7 +227,11 @@ export default function Home() {
                   error. Harum veniam quidem voluptatum ipsam sunt, sit velit
                   temporibus vel provident nostrum soluta?
                 </p>
-                <a className="bg-black text-white py-2 px-5" href="$">
+                <a
+                  className="bg-black text-white py-2 px-5"
+                  href="#"
+                  title="Proyecto 3"
+                >
                   {" "}
                   See more{" "}
                 </a>
@@ -220,7 +242,8 @@ export default function Home() {
               <img
                 className="object-cover"
                 src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="1"
+                alt="Proyecto 4"
+                title="Proyecto 4"
               />
               <div className="absolute h-full w-full bg-black/20 flex flex-col items-center justify-center -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300 gap-y-5 sm:gap-y-0">
                 <h3 className="text-2xl text-white font-bold">Proyecto 4</h3>
@@ -230,7 +253,11 @@ export default function Home() {
                   error. Harum veniam quidem voluptatum ipsam sunt, sit velit
                   temporibus vel provident nostrum soluta?
                 </p>
-                <a className="bg-black text-white py-2 px-5" href="$">
+                <a
+                  className="bg-black text-white py-2 px-5"
+                  href="#"
+                  title="Proyecto 4"
+                >
                   {" "}
                   See more{" "}
                 </a>
