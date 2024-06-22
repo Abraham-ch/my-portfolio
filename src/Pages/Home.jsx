@@ -1,4 +1,5 @@
 import FormEmail from "../components/FormEmail";
+import Perfil from "../img/perfil.jpg";
 
 export default function Home() {
   return (
@@ -85,7 +86,7 @@ export default function Home() {
 
             <img
               className="rounded-full w-2/3 border-4 border-blue-950 dark:border-yellow-400 h-auto sm:h-72 sm:w-auto my-4"
-              src="../src/img/perfil.jpg"
+              src={Perfil}
               alt="Abraham Chafloque Arias"
               title="Abraham Chafloque"
             />
