@@ -49,17 +49,20 @@ function App() {
             <a
               href="#about-me"
               className="p-2 m-1 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-400"
+              title="About me"
             >
               About me
             </a>
             <a
               href="#projects"
+              title="Projects"
               className="p-2 m-1 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-400"
             >
               Projects
             </a>
             <a
               href="#contact"
+              title="Contact"
               className="p-2 m-1 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-400"
             >
               Contact
@@ -151,18 +154,21 @@ function App() {
         <div className="space-y-1 pb-3 border-t py-3 pt-2 sm:hidden">
           <a
             href="#about-me"
+            title="About me"
             className="bg-yellow-400 text-white block px-3 py-2 rounded-md transition-colors"
           >
             About me
           </a>
           <a
             href="#projects"
+            title="Projects"
             className="text-slate-300 hover:bg-yellow-400 hover:text-white block px-3 py-2 rounded-md transition-colors"
           >
             Projects
           </a>
           <a
             href="#contact"
+            title="Contact"
             className="text-slate-300 hover:bg-yellow-400 hover:text-white block px-3 py-2 rounded-md transition-colors"
           >
             Contact
