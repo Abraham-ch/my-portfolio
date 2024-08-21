@@ -1,7 +1,6 @@
-export default function FormEmail() {
+const InTouch = () => {
   return (
-    <>
-      <section
+    <section
         id="contact"
         className="md:flex md:justify-between pb-2 bg-slate-200 dark:bg-slate-800 mt-10 mb-20 flex-cols"
       >
@@ -9,15 +8,8 @@ export default function FormEmail() {
           <h2 className="text-2xl font-bold text-blue-950 px-7 pt-10 dark:text-yellow-400">
             Get in touch
           </h2>
-          <p className="px-7 pt-8 max-w-xl dark:text-gray-200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos
-            eveniet illo, iure possimus ullam quaerat officia magni
-            exercitationem ab, saepe nam architecto consequatur, reiciendis
-            aliquam nulla? Deserunt, omnis deleniti?
-            <strong className="flex flex-col py-4">
-              {" "}
-              Aun faltan cositas por añadir
-            </strong>
+          <p className="px-7 pt-8 max-w-lg dark:text-gray-200">
+            Feel free to get in touch with me using the form below. I’m open to any inquiries, collaborations, or just a chat about tech projects :{")"}
           </p>
         </div>
         <form
@@ -71,6 +63,7 @@ export default function FormEmail() {
           </button>
         </form>
       </section>
-    </>
-  );
-}
+  )
+};
+
+export { InTouch }
