@@ -1,9 +1,9 @@
 const Projects = () => {
   return (
-    <section
+    <section className="md:pt-20 pt-0"
             id="projects"
           >
-            <h2 className="text-2xl font-bold text-blue-950 px-7 pt-10 pb-5 dark:text-yellow-400">
+            <h2 className="text-2xl font-bold text-blue-950 px-7 pt-0 min[430px]:pt-8 pb-5 dark:text-yellow-400">
             Some Projects
             </h2>
             <span className="px-2 pt-10 pb-10 grid-col-4 lg:grid grid-flow-col grid-rows-6 gap-4">

@@ -21,7 +21,7 @@ import Vite from '../svg/TechnologiesSVG/Vite.svg?react'
 const Technologies = () => {
   return (
   <section className="h-full pb-16 lg:pb-0 lg:h-screen w-full flex flex-col justify-center">
-    <h2 className="text-2xl font-bold text-blue-950 px-7 pt-10 pb-5 dark:text-yellow-400">
+    <h2 className="text-2xl font-bold text-blue-950 px-7 pb-5 dark:text-yellow-400">
       Technologies
     </h2>
     <div className="grid grid-cols-9 grid-rows-4 lg:grid-rows-2 text-blue-950 dark:text-white p-4 gap-4 lg:gap-8 max-w-5xl w-full">
