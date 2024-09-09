@@ -2,6 +2,7 @@ import { Main } from "../sections/Main";
 import { Experience } from "../sections/Experience";
 import { Projects } from "../sections/Projects";
 import { InTouch } from "../sections/InTouch";
+import { Technologies } from "../sections/Technologies";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <main className="max-w-5xl mx-auto">
           <Main />
           <Experience />
+          <Technologies/>
           <Projects />
           <InTouch />
           <footer className="h-10 pb-16 dark:text-gray-100 px-4 text-sm">

@@ -27,6 +27,7 @@ export default function ToogleButton(){
       <button
         className="ml-2 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-500 rounded-full block dark:hidden"
         onClick={handleChangeTheme}
+        title="Light theme"
       >
         <svg
           className="h-6 dark:hidden"
@@ -88,6 +89,7 @@ export default function ToogleButton(){
       <button
         className="ml-2 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-500 rounded-full dark:block hidden"
         onClick={handleChangeTheme}
+        title="Dark theme"
       >
         <svg
           className="h-6 dark:block hidden"
