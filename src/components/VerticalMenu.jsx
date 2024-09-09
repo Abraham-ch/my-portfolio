@@ -11,7 +11,7 @@ const VerticalMenu = () => {
   return (
     <div className="sm:hidden mb-8">
       <span className="flex w-full justify-between sm:hidden pt-4 pb-2 px-4">
-          <button className="rounded p-1 -ml-1 text-blue-950 hover:text-slate-100 hover:bg-blue-950 dark:hover:bg-yellow-400 dark:hover:text-white dark:text-yellow-500 focus:ring-2 focus:ring-slate-50 transition-colors" onClick={toggleMenu}>
+          <button className="rounded p-1 -ml-1 text-blue-950 hover:text-slate-100 hover:bg-blue-950 dark:hover:bg-yellow-400 dark:hover:text-white dark:text-yellow-500 focus:ring-2 focus:ring-slate-50 transition-colors" title="Menu" onClick={toggleMenu}>
             <svg
               width="24"
               height="24"

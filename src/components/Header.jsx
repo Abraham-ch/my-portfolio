@@ -3,7 +3,7 @@ import { VerticalMenu } from "./VerticalMenu"
 
 export default function Header(){
     return (
-      <nav className="px-6 max-w-5xl mx-auto rounded-lg shadow-md backdrop-blur-2xl -m-b-4 sticky top-0 z-50">
+      <nav className="px-6 max-w-5xl mx-auto rounded-sm shadow-md backdrop-blur-2xl -m-b-4 sticky top-0 sm:inset-y-4 z-50">
         <div className="hidden sm:flex h-16 items-center justify-between">
           <div className="flex space-x-6 font-semibold">
             <a

@@ -1,11 +1,11 @@
-import Perfil from "../img/perfil.jpg";
-import Name from '../svg/name.svg?react';
+import Perfil from "../img/perfil.jpg"
+import Name from '../svg/name.svg?react'
 
 const Main = () => {
    return (
     <section
             id="about-me"
-            className="flex items-center sm:justify-between flex-col sm:flex-row rounded-2xl px-2 h-screen"
+            className="flex items-center sm:justify-between flex-col sm:flex-row rounded-2xl px-2 h-screen-16"
           >
             <div>
               <h1 className="px-4 py-4">
