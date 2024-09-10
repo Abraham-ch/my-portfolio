@@ -1,6 +1,6 @@
 const Experience = () => {
   return (
-    <section className="px-8 h-full min-[420px]:h-screen">
+    <section className="px-8 h-full flex flex-col justify-center min-[420px]:h-screen">
             <h2 className="text-2xl font-bold text-blue-950 pt-20 dark:text-yellow-400 py-10">
               Experience
             </h2>
