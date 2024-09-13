@@ -4,7 +4,7 @@ const InTouch = () => {
         id="contact"
         className="md:flex h-full md:justify-between pb-2 bg-slate-200 dark:bg-slate-800 mt-10 mb-20 flex-cols"
       >
-        <div className="px-10 h-full my-auto">
+        <div className="px-10 h-full my-auto md:py-0 pt-10">
           <h2 className="text-2xl font-bold text-blue-950 px-7 dark:text-yellow-400">
             Get in touch
           </h2>
