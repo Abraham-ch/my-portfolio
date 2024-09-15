@@ -1,6 +1,3 @@
-{/*import SmartTransit from "../img/Projects/Figma-SmartTransit.png"
-import Surichakra from "../img/Projects/Galaxy-Tab-S7-surichakra.vercel.app.png"
-import SkyTech from "../img/Projects/Macbook-Air-SkyTech.png" */}
 
 const Projects = () => {
   return (
@@ -29,7 +26,7 @@ const Projects = () => {
                     target="_blank"
                     title="SkyTech" rel="noreferrer"
                   >
-                    See more
+                    Go there!
                   </a>
                 </div>
               </div>
@@ -52,7 +49,7 @@ const Projects = () => {
                     title="Surichakra"
                     target="_blank" rel="noreferrer"
                   >
-                    See more
+                    Go there!
                   </a>
                 </div>
               </div>
@@ -75,7 +72,7 @@ const Projects = () => {
                     title="Figma - SmartTransit"
                     target="_blank" rel="noreferrer"
                   >
-                    See more
+                    Go there!
                   </a>
                 </div>
               </div>

@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import emailjs from '@emailjs/browser'
-import Toast from "./Toast"
 
 const schema = z.object({
   name: z.string(),
@@ -29,12 +28,12 @@ export default function FormComponent() {
     emailjs
       .send(VITE_SERVICE_ID, VITE_TEMPLATE_ID, emailJSparams, VITE_PUBLIC_KEY)
       .then(() => {
-        alert("Mensaje enviado!");
+        alert("Message sent!");
         reset();
         
       })
-      .catch((err) => {
-        alert(JSON.stringify(err));
+      .catch((errors) => {
+        alert(JSON.stringify(errors));
       });
   };
 
@@ -45,9 +44,8 @@ export default function FormComponent() {
           <label htmlFor="Name" className="dark:text-gray-200 font-semibold">
             Full Name
           </label>
-          <input {...register("name", {
-            required: "Please, tell me your name :)"
-          })}
+          <input {...register('name')}
+            minLength="2"
             type="text"
             id="Name"
             placeholder="Jhon Doe"
@@ -58,7 +56,7 @@ export default function FormComponent() {
           <label htmlFor="Email" className="dark:text-gray-200 font-semibold">
             Email
           </label>
-          <input {...register("email", {required: true})}
+          <input {...register("email")}
             type="email"
             id="Email"
             placeholder="jhon.doe@mail.com"
@@ -72,7 +70,7 @@ export default function FormComponent() {
           >
             Message
           </label>
-          <input {...register("message", {required: true})}
+          <input {...register("message")}
             type="text"
             id="Message"
             className="p-2 w-60 h-14 rounded overflow-scroll border-black border-2 border-solid dark:border-white"
@@ -80,7 +78,7 @@ export default function FormComponent() {
             maxLength="auto"
           />
         </div>
-        <input type="submit" className="mt-2 cursor-pointer dark:hover:bg-yellow-400 hover:border-blue-800 hover:bg-blue-800 hover:text-white dark:hover:border-yellow-400 rounded-lg py-1 px-4 transition hover:scale-105 dark:text-gray-200 font-semibold dark:border-white border-2 border-solid border-black"/>
+        <input type="submit" value="Submit" className="mt-2 cursor-pointer dark:hover:bg-yellow-400 hover:border-blue-800 hover:bg-blue-800 hover:text-white dark:hover:border-yellow-400 rounded-lg py-1 px-4 transition hover:scale-105 dark:text-gray-200 font-semibold dark:border-white border-2 border-solid border-black"/>
       </form>
     </>
   )
