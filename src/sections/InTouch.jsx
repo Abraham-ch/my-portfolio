@@ -11,7 +11,7 @@ const InTouch = () => {
             Get in touch
           </h2>
           <p className="px-7 pt-8 max-w-lg dark:text-gray-200">
-            Feel free to get in touch with me using the form below. I’m open to any inquiries, collaborations, or just a chat about tech projects :{")"}
+            Feel free to get in touch with me using the form below. I&apos;m open to any inquiries, collaborations, or just a chat about tech projects :{")"}
           </p>
         </div>  
         <FormComponent />
