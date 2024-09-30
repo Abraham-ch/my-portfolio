@@ -2,6 +2,7 @@ import Perfil from "../img/perfil.jpg"
 import Name from '../svg/name.svg?react'
 import Linkedin from '../svg/Main/linkedin.svg?react';
 import Github from '../svg/Main/github.svg?react'
+import Figma from '../svg/Main/figma.svg?react'
 import { CopyClipboard } from '../components/CopyClipboard'
 
 const Main = () => {
@@ -15,7 +16,7 @@ const Main = () => {
                 <Name className="dark:fill-white fill-black dark:border-white border-black stroke-black max-w-xs dark:stroke-white"/>
               </h1>
               <div className="px-5 py-3 text-2xl font-bold text-blue-950 dark:text-yellow-400">
-                Fronted Developer - Student - 🇵🇪
+                Fronted Developer | UI/UX Designer | 🇵🇪
               </div>
               <p className="px-5 py-3 text-slate-700 max-w-2xl dark:text-gray-200">
                 I&apos;m a Physical engineering student and an enthusiastic in web
@@ -30,7 +31,7 @@ const Main = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Linkedin className=" transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-yellow-400 w-9 h-auto" />
+                  <Linkedin className=" transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-blue-500 w-9 h-auto" />
                 </a>
                 <CopyClipboard />
                 <a
@@ -40,6 +41,14 @@ const Main = () => {
                   rel="noopener noreferrer"
                 >
                   <Github className="transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-yellow-400 w-9 h-auto" />
+                </a>
+                <a
+                  href="https://www.figma.com/@abrahamch"
+                  target="_blank"
+                  title="Figma"
+                  rel="noopener noreferrer"
+                >
+                  <Figma className="transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-pink-500 w-9 h-auto" />
                 </a>
               </div>
             </div>
