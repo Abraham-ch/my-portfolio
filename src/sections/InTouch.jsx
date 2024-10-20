@@ -7,7 +7,7 @@ const InTouch = () => {
         className="md:flex-row flex flex-col gap-y-12 md:py-0 py-16 h-full md:justify-between px-2 items-center rounded-xl bg-slate-200 dark:bg-slate-800 my-16 md:my-40"
       >
         <div className="min-[500px]:px-10 px-4 h-full my-auto md:py-0 pt-10">
-          <h2 className="text-2xl font-bold text-blue-950 min-[300px]:px-7 dark:text-yellow-400">
+          <h2 className="text-2xl font-bold text-blue-950 min-[300px]:px-4 dark:text-yellow-400">
             Get in touch
           </h2>
           <p className="min-[500px]:px-4 pt-8 max-w-lg dark:text-gray-200">
