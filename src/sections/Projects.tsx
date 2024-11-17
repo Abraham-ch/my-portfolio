@@ -73,7 +73,7 @@ const projects = [
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(0)
   return (
-    <section className="md:h-full flex flex-col justify-center pb-12 sm:py-0">
+    <section id="projects" className="md:h-full flex flex-col justify-center pb-12 sm:py-0">
       <span className="pb-5 block">
         <h2 className="text-2xl inline font-bold text-blue-950 pl-7 pr-4 dark:text-yellow-400">
           Projects
