@@ -31,8 +31,8 @@ export default function FormComponent() {
       .send(VITE_SERVICE_ID, VITE_TEMPLATE_ID, emailJSparams, VITE_PUBLIC_KEY)
       .then(() => {
         toast({
-          title: "Mensaje enviado",
-          description: "Muchas gracias por contactarme :)",
+          title: "Message sent",
+          description: "Thank you very much for contacting me :)",
           duration: 2500,
         })
         reset();
