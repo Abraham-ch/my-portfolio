@@ -6,8 +6,8 @@ const CopyClipboard = () => {
   const copyToClipboard = async (value: string) => {
     await navigator.clipboard.writeText(value)
     toast({
-      title: '¡Copiado!',
-      description: 'El correo electrónico ha sido copiado al portapapeles',
+      title: 'Copied!',
+      description: 'The email has been copied to the clipboard',
       duration: 2500
     })
   }
