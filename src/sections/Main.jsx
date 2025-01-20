@@ -19,10 +19,8 @@ const Main = () => {
                 Fronted Developer | UI/UX Designer | 🇵🇪
               </div>
               <p className="px-5 py-3 text-sm sm:text-base text-slate-700 max-w-2xl dark:text-gray-200">
-                I&apos;m a Physical engineering student and an enthusiastic in web
-                development currently improving my skills in HTML, CSS,
-                JavaScript and Git software with well known frameworks such as
-                Astro and React.
+                I&apos;m a Physics Engineering student in my final semester with a strong background in web development.
+                I have experience with modern frameworks like Astro, React, Next.js, Remix, and Expo with React Native, focusing on creating scalable and user-friendly applications. While I&apos;m still expanding my skills in mobile development, I&apos;m proficient in JavaScript, TypeScript, and industry best practices.
               </p>
               <div className="flex ml-4 gap-2 pt-2">
                 <a
