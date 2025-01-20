@@ -9,16 +9,16 @@ const Main = () => {
    return (
     <section
             id="about-me"
-            className="flex items-center sm:justify-between flex-col sm:flex-row rounded-2xl px-2 h-screen-16"
+            className="flex items-center sm:justify-between flex-col sm:flex-row rounded-2xl px-2 h-full sm:h-screen-16 pb-4 sm:pb-0"
           >
             <div>
               <h1 className="px-4 py-4">
                 <Name className="dark:fill-white fill-black dark:border-white border-black stroke-black max-w-xs dark:stroke-white"/>
               </h1>
-              <div className="px-5 py-3 text-2xl font-bold text-blue-950 dark:text-yellow-400">
+              <div className="px-5 py-3 text-lg sm:text-2xl font-bold text-blue-950 dark:text-yellow-400">
                 Fronted Developer | UI/UX Designer | 🇵🇪
               </div>
-              <p className="px-5 py-3 text-slate-700 max-w-2xl dark:text-gray-200">
+              <p className="px-5 py-3 text-sm sm:text-base text-slate-700 max-w-2xl dark:text-gray-200">
                 I&apos;m a Physical engineering student and an enthusiastic in web
                 development currently improving my skills in HTML, CSS,
                 JavaScript and Git software with well known frameworks such as
