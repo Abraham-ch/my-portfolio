@@ -5,6 +5,8 @@ import SuriImg from "../img/Projects/Surichakra.webp"
 import STImg from "../img/Projects/SmartTransit.webp"
 import SkyTechImg from "../img/Projects/SkyTech.webp"
 import FigmaImg from "../img/Projects/Figma.webp"
+import BessSolar from "../img/Projects/BessSolar.webp"
+import JWControl from "../img/Projects/JWControl.webp"
 
 const projects = [
   {
@@ -67,6 +69,37 @@ const projects = [
       Tools_Environments: ["Figma"]
     }
   },
+  {
+    id: 5,
+    title: "Bess Solar",
+    responsibilities: "Full-Stack Development & E-commerce",
+    description: "Complete e-commerce platform for a clean energy company selling solar panels, batteries, and renewable energy equipment. Features product management through Sanity CMS, shopping cart functionality, and integrated quotation system with WhatsApp/email routing.",
+    imageUrl: `${BessSolar}`,
+    link: "https://bess-solar.vercel.app/",
+    rol: "Developed a full-featured e-commerce platform with CMS integration, shopping cart functionality, and automated quotation system. Implemented responsive design and seamless user experience for product browsing and purchasing flow.",
+    tecnologias: {
+      Frameworks: ["Remix", "Vite"],
+      UI_Libraries: ["TailwindCSS"],
+      Languages: ["HTML", "CSS", "TypeScript"],
+      Tools_Environments: ["Git", "Sanity", "EmailJS", "Cloudflare", "Vercel"]
+    }
+  },
+  
+  {
+    id: 6,
+    title: "JW Control",
+    responsibilities: "UI Design & Development",
+    description: "Professional landing page for an industrial hardware company specializing in custom firmware and process automation. Features dynamic service showcase using markdown content and integrated contact system for client inquiries.",
+    imageUrl: `${JWControl}`,
+    link: "https://www.jw-control.com/",
+    rol: "Designed and developed a modern landing page with focus on industrial aesthetics. Implemented markdown-based content management for services section and optimized user experience for B2B clients.",
+    tecnologias: {
+      Frameworks: ["Astro"],
+      UI_Libraries: [],
+      Languages: ["HTML", "CSS", "JavaScript"],
+      Tools_Environments: ["Git", "Figma", "EmailJS", "Cloudflare", "Vercel"]
+    }
+  }
 ];
 
 
