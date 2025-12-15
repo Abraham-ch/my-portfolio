@@ -1,0 +1,6 @@
+export { default as BessSolar } from './BessSolar.webp'
+export { default as Figma } from './Figma.webp'
+export { default as JWControl } from './JWControl.webp'
+export { default as SkyTech } from './SkyTech.webp'
+export { default as SmartTransit } from './SmartTransit.webp'
+export { default as Surichakra } from './Surichakra.webp'
