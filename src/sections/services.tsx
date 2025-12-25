@@ -1,4 +1,5 @@
 import { Subtitle } from '@/components/Subtitle'
+import { useLanguage } from '@/context/LanguageContext'
 
 type Props = {
   services: Service[]
@@ -10,9 +11,11 @@ type Service = {
 }
 
 export const Services = ({ services }: Props) => {
+  const { t } = useLanguage()
+
   return (
     <section className='relative min-h-dvh flex flex-col justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-      <Subtitle text='Services' />
+      <Subtitle text={t.Subtitles.services} />
       <article className='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 items-start md:items-center pt-16'>
         <span className='text-[200px] md:text-[300px] lg:text-[350px] leading-none text-stroke'>
           S

@@ -2,9 +2,12 @@ import { Avatar } from '../assets/img'
 import { Figma, Github, Linkedin } from '../assets/svg/main'
 import Name from '../assets/svg/name.svg?react'
 import { CopyClipboard } from '../components/CopyClipboard'
-import { About } from './en'
+import { useLanguage } from '../context/LanguageContext'
 
 const Main = () => {
+  const { t } = useLanguage()
+  const About = t.About
+
   return (
     <section
       id='about-me'
