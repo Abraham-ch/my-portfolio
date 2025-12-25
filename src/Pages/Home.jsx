@@ -1,5 +1,5 @@
 import { StickyVerticalBar } from '../components/VerticalBar'
-import { About, Services as ServicesMock } from '../sections/en'
+import { useLanguage } from '../context/LanguageContext'
 import { Experience } from '../sections/experience'
 import { InTouch } from '../sections/in-touch'
 import { Main } from '../sections/main'
@@ -7,13 +7,15 @@ import { Services } from '../sections/services'
 import { Skills } from '../sections/skills'
 
 export default function Home() {
+  const { t } = useLanguage()
+
   return (
     <main className='mx-auto'>
       <div className='flex'>
-        <StickyVerticalBar title={About.title} />
+        <StickyVerticalBar title={t.About.title} />
         <div className='w-full'>
           <Main />
-          <Services services={ServicesMock} />
+          <Services services={t.Services} />
           <Experience />
           <Skills />
           <InTouch />

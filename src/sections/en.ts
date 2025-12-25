@@ -184,3 +184,58 @@ export const Skills = [
     icons: ['Figma'],
   },
 ]
+
+export const InTouch = {
+  title: "Let's build something",
+  titleHighlight: 'amazing together',
+  description:
+    "I'm always excited to collaborate on new projects, discuss innovative ideas, or simply have a conversation about technology and development. Let's create something extraordinary.",
+  features: [
+    {
+      title: 'Fast response time',
+      icon: 'lightning',
+    },
+    {
+      title: 'Professional collaboration',
+      icon: 'check',
+    },
+    {
+      title: 'Flexible solutions',
+      icon: 'adjustments',
+    },
+  ],
+  form: {
+    namePlaceholder: 'Your name',
+    emailPlaceholder: 'Your email',
+    messagePlaceholder: 'Tell me about your project...',
+    submitButton: 'Send Message',
+    formTitle: "Let's work together",
+    formSubtitle: "Let's help your projects build better.",
+    nameLabel: 'Name',
+    emailLabel: 'Email',
+    messageLabel: 'How can I help?',
+    namePlaceholderFull: 'First and last name',
+    emailPlaceholderFull: 'Work email',
+    messagePlaceholderFull: 'Tell me about your project needs',
+    submitButtonFull: 'Get in touch',
+    toastTitle: 'Message sent',
+    toastDescription: 'Thank you very much for contacting me :)',
+  },
+}
+
+export const Navigation = {
+  menu: 'MENU',
+  sections: {
+    main: 'Home',
+    services: 'Services',
+    experience: 'Experience',
+    skills: 'Skills',
+    contact: 'Contact',
+  },
+}
+
+export const Subtitles = {
+  services: 'Services',
+  experience: 'Some of my recent experience :)',
+  skills: 'Skills',
+}

@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 
 import { ChevronRight } from '@/assets/svg/main'
 import { Subtitle } from '@/components/Subtitle'
-
-import { Experiences } from './en'
+import { useLanguage } from '@/context/LanguageContext'
 
 const Experience = () => {
+  const { t } = useLanguage()
+  const Experiences = t.Experiences
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const imageRefs = useRef<(HTMLImageElement | null)[]>([])
 
@@ -40,7 +41,7 @@ const Experience = () => {
   return (
     <section className='mx-auto px-4 sm:px-6 lg:pl-16 pt-32 w-full'>
       <div className='max-w-sm'>
-        <Subtitle text='Some of my recent experience :)' />
+        <Subtitle text={t.Subtitles.experience} />
       </div>
       <div className='flex flex-col lg:flex-row justify-between items-start min-h-screen gap-8 overflow-x-clip'>
         <article className='lg:sticky lg:top-0 pt-8 lg:pt-32 w-full lg:max-w-[400px] space-y-4 self-start'>
@@ -48,14 +49,16 @@ const Experience = () => {
             <div key={experience.title} className='overflow-hidden'>
               <h3
                 className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${
-                  activeIndex === index ? 'text-white' : 'text-gray-300'
+                  activeIndex === index
+                    ? 'text-black dark:text-white'
+                    : 'text-gray-600 dark:text-gray-300'
                 }`}
               >
                 {experience.title}
               </h3>
               {/* Mobile/Tablet: Always show description */}
               <div className='lg:hidden mt-4 space-y-2'>
-                <p className='text-sm md:text-base text-white'>
+                <p className='text-sm md:text-base text-gray-700 dark:text-white'>
                   {experience.description}
                 </p>
                 {experience.link && (
@@ -63,7 +66,7 @@ const Experience = () => {
                     href={experience.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-gray-300 flex font-bold text-sm md:text-base'
+                    className='text-gray-600 dark:text-gray-300 flex font-bold text-sm md:text-base hover:text-blue-600 dark:hover:text-yellow-400'
                   >
                     Learn more <ChevronRight className='w-5' />
                   </a>
@@ -84,13 +87,15 @@ const Experience = () => {
                     : 'max-h-0 opacity-0 mt-0'
                 }`}
               >
-                <p className='text-base text-white'>{experience.description}</p>
+                <p className='text-base text-gray-700 dark:text-white'>
+                  {experience.description}
+                </p>
                 {experience.link && (
                   <a
                     href={experience.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='mt-2 text-gray-300 flex font-bold'
+                    className='mt-2 text-gray-600 dark:text-gray-300 flex font-bold hover:text-blue-600 dark:hover:text-yellow-400'
                   >
                     Learn more <ChevronRight className='w-5' />
                   </a>
