@@ -4,7 +4,7 @@ import { Moon, Sun } from '../assets/svg/header'
 
 export default function ToogleButton() {
   const [theme, setTheme] = useState(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark'
     }
 
