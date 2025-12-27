@@ -27,7 +27,7 @@ export const Services = ({ services }: Props) => {
           </span>
         ))}
       </article>
-      <span className='absolute bottom-0 text-[80px] md:text-[120px] lg:text-[150px] text-stroke uppercase font-bold'>
+      <span className='absolute bottom-0 text-[64px] md:text-[120px] lg:text-[150px] text-stroke uppercase font-bold'>
         cre8tive
       </span>
     </section>
