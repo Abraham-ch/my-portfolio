@@ -8,13 +8,13 @@ const Experience = () => {
   const { t } = useLanguage()
   const Experiences = t.Experiences
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
-  const imageRefs = useRef<(HTMLImageElement | null)[]>([])
+  const triggerRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const index = imageRefs.current.indexOf(
-          entry.target as HTMLImageElement,
+        const index = triggerRefs.current.indexOf(
+          entry.target as HTMLDivElement,
         )
         if (index !== -1) {
           setActiveIndex(index)
@@ -26,10 +26,10 @@ const Experience = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
-      rootMargin: '-20% 0px -20% 0px',
+      rootMargin: '0px',
     })
 
-    imageRefs.current.forEach((ref) => {
+    triggerRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref)
     })
 
@@ -107,17 +107,23 @@ const Experience = () => {
         {/* Desktop only: Scrolling images with intersection observer */}
         <figure className='hidden lg:block py-4 space-y-2 flex-shrink-0 overflow-x-hidden'>
           {Experiences.map((experience, index) => (
-            <img
-              key={experience.title}
-              ref={(el) => (imageRefs.current[index] = el)}
-              src={experience.img}
-              alt={experience.title}
-              className={`h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out ${
-                activeIndex === index
-                  ? 'opacity-100 translate-x-32 xl:translate-x-56 scale-100'
-                  : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90'
-              }`}
-            />
+            <div key={experience.title} className='relative'>
+              <img
+                src={experience.img}
+                alt={experience.title}
+                className={`h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out ${
+                  activeIndex === index
+                    ? 'opacity-100 translate-x-32 xl:translate-x-56 scale-100'
+                    : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90'
+                }`}
+              />
+              {/* Invisible trigger div */}
+              <div
+                ref={(el) => (triggerRefs.current[index] = el)}
+                className='absolute top-1/2 left-0 w-full h-2'
+                aria-hidden='true'
+              />
+            </div>
           ))}
         </figure>
       </div>
