@@ -19,17 +19,17 @@ export const Services = [
   {
     title: 'Identidad de Marca.',
     description:
-      'Llevar la historia de tu marca al frente le da una dimensión emocional a tu identidad visual, lo cual es esencial hoy más que nunca en el panorama digital actual.',
+      'Ayudo a las marcas a traducir su visión en una identidad digital consistente. Desde el lenguaje visual hasta los sistemas de diseño, creo interfaces que reflejan los valores de la marca, mejoran el reconocimiento y aseguran coherencia en productos web y digitales.',
   },
   {
     title: 'Tecnología.',
     description:
-      'Llevar la historia de tu marca al frente le da una dimensión emocional a tu identidad visual, lo cual es esencial hoy más que nunca en el panorama digital actual.',
+      'Diseño y construyo aplicaciones web escalables y de alto rendimiento utilizando tecnologías modernas. Desde arquitecturas frontend hasta integraciones backend, me enfoco en código limpio, mantenibilidad y soluciones reales que generan un impacto medible.',
   },
   {
     title: 'Diseño UX/UI.',
     description:
-      'Llevar la historia de tu marca al frente le da una dimensión emocional a tu identidad visual, lo cual es esencial hoy más que nunca en el panorama digital actual.',
+      'Creo experiencias de usuario intuitivas y accesibles respaldadas por principios de diseño y necesidades reales de los usuarios. A través de investigación, prototipado e iteración, diseño interfaces que son funcionales y visualmente refinadas.',
   },
 ]
 
