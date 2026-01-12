@@ -19,17 +19,17 @@ export const Services = [
   {
     title: 'Brand Identity.',
     description:
-      'Bringing the history of your brand to the forefront gives an emotional dimension to your visual identity, which is essential today more than ever in todays digital landscape.',
+      'I help brands translate their vision into a consistent digital identity. From visual language to design systems, I create interfaces that reflect brand values, improve recognition, and ensure coherence across web and digital products.',
   },
   {
     title: 'Technology.',
     description:
-      'Bringing the history of your brand to the forefront gives an emotional dimension to your visual identity, which is essential today more than ever in todays digital landscape.',
+      'I design and build scalable, high-performance web applications using modern technologies. From frontend architectures to backend integrations, I focus on clean code, maintainability, and real-world solutions that deliver measurable impact.',
   },
   {
     title: 'UX/UI Design.',
     description:
-      'Bringing the history of your brand to the forefront gives an emotional dimension to your visual identity, which is essential today more than ever in todays digital landscape.',
+      'I create intuitive and accessible user experiences backed by design principles and real user needs. Through research, prototyping, and iteration, I design interfaces that are both functional and visually refined.',
   },
 ]
 
