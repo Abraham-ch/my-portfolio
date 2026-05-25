@@ -14,7 +14,10 @@ export const Skills = () => {
   const column5 = Info.slice(12, 13)
 
   return (
-    <section className='min-h-screen pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+    <section
+      id='skills'
+      className='min-h-screen pt-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
+    >
       <div className='mb-12'>
         <Subtitle text={t.Subtitles.skills} />
       </div>

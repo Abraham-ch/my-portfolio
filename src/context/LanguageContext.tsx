@@ -1,9 +1,15 @@
-import { type ReactNode, createContext, useContext, useState } from 'react'
+import {
+  type ReactNode,
+  createContext,
+  useContext,
+  useMemo,
+  useState,
+} from 'react'
 
-import * as en from '../sections/en'
-import * as es from '../sections/es'
+import * as en from '../sections/translations/en'
+import * as es from '../sections/translations/es'
 
-type Language = 'en' | 'es'
+export type Language = 'en' | 'es'
 
 interface LanguageContextType {
   language: Language
@@ -23,11 +29,14 @@ const translations = {
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('en')
 
-  const value = {
-    language,
-    setLanguage,
-    t: translations[language],
-  }
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      t: translations[language],
+    }),
+    [language],
+  )
 
   return (
     <LanguageContext.Provider value={value}>

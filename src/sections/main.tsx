@@ -1,8 +1,6 @@
-import { Avatar } from '../assets/img'
-import { Figma, Github, Linkedin } from '../assets/svg/main'
-import Name from '../assets/svg/name.svg?react'
-import { CopyClipboard } from '../components/CopyClipboard'
-import { useLanguage } from '../context/LanguageContext'
+import { Avatar } from '@/assets/img'
+import Name from '@/assets/svg/name.svg?react'
+import { useLanguage } from '@/context/LanguageContext'
 
 const Main = () => {
   const { t } = useLanguage()
@@ -11,13 +9,13 @@ const Main = () => {
   return (
     <section
       id='about-me'
-      className='flex items-center sm:justify-around flex-col sm:flex-row-reverse px-2 sm:h-screen-16 pb-4 sm:pb-0 max-w-7xl mx-auto'
+      className='flex items-center sm:pt-0 pt-10 justify-around flex-col sm:flex-row-reverse px-2 sm:h-screen-16 pb-4 sm:pb-0 max-w-7xl mx-auto'
     >
       <div>
         <h1 className='px-4 py-4'>
           <Name className='dark:fill-yellow-500 fill-black dark:border-yellow-500 border-black stroke-black max-w-xs dark:stroke-yellow-500' />
         </h1>
-        <p className='px-5 py-3 text-sm xl:text-xl sm:text-base text-slate-700 max-w-2xl dark:text-gray-200'>
+        <p className='px-5 py-3 xl:text-xl text-base text-slate-700 max-w-2xl dark:text-gray-200'>
           {About.description}
         </p>
       </div>
@@ -28,34 +26,6 @@ const Main = () => {
         alt='Abraham Chafloque Arias'
         title='Abraham Chafloque'
       />
-
-      <section className='absolute bottom-8 right-8 flex flex-col ml-4 gap-2 pt-2'>
-        <a
-          href='https://www.linkedin.com/in/abraham-chafloque-arias-049384220/'
-          title='Linkedin'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Linkedin className=' transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-blue-500 w-9 h-auto' />
-        </a>
-        <CopyClipboard />
-        <a
-          href='https://github.com/Abraham-ch'
-          target='_blank'
-          title='Github'
-          rel='noopener noreferrer'
-        >
-          <Github className='transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-yellow-400 w-9 h-auto' />
-        </a>
-        <a
-          href='https://www.figma.com/@abrahamch'
-          target='_blank'
-          title='Figma'
-          rel='noopener noreferrer'
-        >
-          <Figma className='transition hover:scale-110 hover:text-blue-800 dark:text-white dark:hover:text-pink-500 w-9 h-auto' />
-        </a>
-      </section>
     </section>
   )
 }

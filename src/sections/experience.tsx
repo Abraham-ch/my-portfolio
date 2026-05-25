@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 import { ChevronRight } from '@/assets/svg/main'
-import { Subtitle } from '@/components/Subtitle'
+import { Subtitle } from '@/components'
 import { useLanguage } from '@/context/LanguageContext'
+import { cn } from '@/utils/cn'
 
 const Experience = () => {
   const { t } = useLanguage()
@@ -39,7 +40,10 @@ const Experience = () => {
   }, [])
 
   return (
-    <section className='mx-auto px-4 sm:px-6 lg:pl-16 pt-32 w-full'>
+    <section
+      id='experience'
+      className='mx-auto px-4 sm:px-6 lg:pl-16 pt-32 w-full'
+    >
       <div className='max-w-sm'>
         <Subtitle text={t.Subtitles.experience} />
       </div>
@@ -81,11 +85,12 @@ const Experience = () => {
               </div>
               {/* Desktop: Collapsing behavior */}
               <div
-                className={`hidden lg:block transition-all duration-500 ease-in-out overflow-hidden ${
+                className={cn(
+                  'hidden lg:block transition-all duration-500 ease-in-out overflow-hidden',
                   activeIndex === index
                     ? 'max-h-96 opacity-100 mt-4'
-                    : 'max-h-0 opacity-0 mt-0'
-                }`}
+                    : 'max-h-0 opacity-0 mt-0',
+                )}
               >
                 <p className='text-base text-gray-700 dark:text-white'>
                   {experience.description}
@@ -111,11 +116,12 @@ const Experience = () => {
               <img
                 src={experience.img}
                 alt={experience.title}
-                className={`h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out ${
+                className={cn(
+                  'h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out',
                   activeIndex === index
                     ? 'opacity-100 translate-x-32 xl:translate-x-56 scale-100'
-                    : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90'
-                }`}
+                    : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90',
+                )}
               />
               {/* Invisible trigger div */}
               <div

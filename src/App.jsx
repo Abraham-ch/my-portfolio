@@ -1,7 +1,7 @@
+import { Header } from '@/components'
 import { Toaster } from '@/components/ui/toaster'
 
 import Home from './Pages/Home'
-import { Header } from './components/Header'
 
 function App() {
   return (
