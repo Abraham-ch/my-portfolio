@@ -13,9 +13,15 @@ export const ToogleButton = () => {
 
   useEffect(() => {
     if (theme === 'dark') {
-      document.querySelector('html').classList.add('dark')
+      const htmlElement = document.querySelector('html')
+      if (htmlElement) {
+        htmlElement.classList.add('dark')
+      }
     } else {
-      document.querySelector('html').classList.remove('dark')
+      const htmlElement = document.querySelector('html')
+      if (htmlElement) {
+        htmlElement.classList.remove('dark')
+      }
     }
   }, [theme])
 
