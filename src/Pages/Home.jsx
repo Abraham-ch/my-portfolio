@@ -1,13 +1,14 @@
-import { StickyVerticalBar } from '../components/VerticalBar'
-import { useLanguage } from '../context/LanguageContext'
-import { Experience } from '../sections/experience'
-import { InTouch } from '../sections/in-touch'
-import { Main } from '../sections/main'
-import { Services } from '../sections/services'
-import { Skills } from '../sections/skills'
+import { FixedIcons, StickyVerticalBar } from '@/components'
+import { useLanguage } from '@/context/LanguageContext'
+import { Experience } from '@/sections/experience'
+import { InTouch } from '@/sections/in-touch'
+import { Main } from '@/sections/main'
+import { Services } from '@/sections/services'
+import { Skills } from '@/sections/skills'
 
 export default function Home() {
   const { t } = useLanguage()
+  const year = new Date().getFullYear()
 
   return (
     <main className='mx-auto'>
@@ -15,6 +16,7 @@ export default function Home() {
         <StickyVerticalBar title={t.About.title} />
         <div className='w-full'>
           <Main />
+          <FixedIcons />
           <Services services={t.Services} />
           <Experience />
           <Skills />
@@ -22,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <footer className='h-10 pb-16 dark:text-gray-100 px-4 text-sm'>
-        © 2024 Abraham Ch. Some rights reserved and deserved.
+        © {year} Abraham Ch. Some rights reserved and deserved.
       </footer>
     </main>
   )

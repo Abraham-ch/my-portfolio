@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import { Moon, Sun } from '../assets/svg/header'
+import { Moon, Sun } from '@/assets/svg/header'
 
-export default function ToogleButton() {
+export const ToogleButton = () => {
   const [theme, setTheme] = useState(() => {
     if (globalThis.matchMedia('(prefers-color-scheme: dark)').matches) {
       return 'dark'
@@ -24,7 +24,7 @@ export default function ToogleButton() {
   }
 
   return (
-    <div className='flex'>
+    <div className='flex z-100'>
       <button
         className='ml-2 transition-colors hover:text-blue-800 dark:hover:text-white dark:text-yellow-500 rounded-full block dark:hidden'
         onClick={handleChangeTheme}
