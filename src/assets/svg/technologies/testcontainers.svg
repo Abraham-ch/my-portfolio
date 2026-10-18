@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="72" viewBox="0 0 64 72" fill="none">
+  <title>Testcontainers cube logo</title>
+  <path d="M32 2.5 61 18.5 32 35.2 3 18.5 32 2.5Z" fill="#159FA8" stroke="#281044" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M3 18.5 32 35.2V68.5L3 51.5V18.5Z" fill="#12C6B7" stroke="#281044" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M61 18.5 32 35.2V68.5L61 51.5V18.5Z" fill="#087F98" stroke="#281044" stroke-width="3.5" stroke-linejoin="round"/>
+</svg>

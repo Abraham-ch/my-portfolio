@@ -5,6 +5,7 @@ import { InTouch } from '@/sections/in-touch'
 import { Main } from '@/sections/main'
 import { Services } from '@/sections/services'
 import { Skills } from '@/sections/skills'
+import { Work } from '@/sections/work'
 
 export default function Home() {
   const { t } = useLanguage()
@@ -18,6 +19,7 @@ export default function Home() {
           <Main />
           <FixedIcons />
           <Services services={t.Services} />
+          <Work />
           <Experience />
           <Skills />
           <InTouch />

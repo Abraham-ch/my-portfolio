@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
 
 import { ChevronRight } from '@/assets/svg/main'
 import { Subtitle } from '@/components'
@@ -39,13 +39,20 @@ const Experience = () => {
     }
   }, [])
 
+  const imageClass =
+    'h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out'
+  const activeClass = (index: number) =>
+    activeIndex === index
+      ? 'opacity-100 translate-x-32 xl:translate-x-56 scale-100'
+      : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90'
+
   return (
     <section
-      id='experience'
+      id='projects'
       className='mx-auto px-4 sm:px-6 lg:pl-16 pt-32 w-full'
     >
       <div className='max-w-sm'>
-        <Subtitle text={t.Subtitles.experience} />
+        <Subtitle text={t.Subtitles.projects} />
       </div>
       <div className='flex flex-col lg:flex-row justify-between items-start min-h-screen gap-8 overflow-x-clip'>
         <article className='lg:sticky lg:top-0 pt-8 lg:pt-32 w-full lg:max-w-[400px] space-y-4 self-start'>
@@ -54,7 +61,7 @@ const Experience = () => {
               <h3
                 className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${
                   activeIndex === index
-                    ? 'text-black dark:text-white'
+                    ? 'text-yellow-500'
                     : 'text-gray-600 dark:text-gray-300'
                 }`}
               >
@@ -65,6 +72,11 @@ const Experience = () => {
                 <p className='text-sm md:text-base text-gray-700 dark:text-white'>
                   {experience.description}
                 </p>
+                {'stack' in experience && (
+                  <p className='text-sm text-gray-600 dark:text-gray-300'>
+                    {experience.stack}
+                  </p>
+                )}
                 {experience.link && (
                   <a
                     href={experience.link}
@@ -76,11 +88,13 @@ const Experience = () => {
                   </a>
                 )}
                 {experience.img && (
-                  <img
-                    src={experience.img}
-                    alt={experience.title}
-                    className='w-full h-auto rounded-lg object-cover mt-4'
-                  />
+                  <ProjectLink href={experience.link} title={experience.title}>
+                    <img
+                      src={experience.img}
+                      alt={experience.title}
+                      className='w-full h-auto rounded-lg object-cover mt-4'
+                    />
+                  </ProjectLink>
                 )}
               </div>
               {/* Desktop: Collapsing behavior */}
@@ -88,13 +102,18 @@ const Experience = () => {
                 className={cn(
                   'hidden lg:block transition-all duration-500 ease-in-out overflow-hidden',
                   activeIndex === index
-                    ? 'max-h-96 opacity-100 mt-4'
+                    ? 'max-h-[40rem] opacity-100 mt-4'
                     : 'max-h-0 opacity-0 mt-0',
                 )}
               >
                 <p className='text-base text-gray-700 dark:text-white'>
                   {experience.description}
                 </p>
+                {'stack' in experience && (
+                  <p className='mt-2 text-sm text-gray-600 dark:text-gray-300'>
+                    {experience.stack}
+                  </p>
+                )}
                 {experience.link && (
                   <a
                     href={experience.link}
@@ -113,16 +132,26 @@ const Experience = () => {
         <figure className='hidden lg:block py-4 space-y-2 flex-shrink-0 overflow-x-hidden'>
           {Experiences.map((experience, index) => (
             <div key={experience.title} className='relative'>
-              <img
-                src={experience.img}
-                alt={experience.title}
-                className={cn(
-                  'h-[600px] xl:h-[800px] rounded-lg aspect-[16/12] object-cover transition-all duration-700 ease-out',
-                  activeIndex === index
-                    ? 'opacity-100 translate-x-32 xl:translate-x-56 scale-100'
-                    : 'opacity-30 translate-x-48 xl:translate-x-72 scale-90',
+              {/* ponytail: placeholder until the project has a screenshot */}
+              <ProjectLink href={experience.link} title={experience.title}>
+                {experience.img ? (
+                  <img
+                    src={experience.img}
+                    alt={experience.title}
+                    className={cn(imageClass, activeClass(index))}
+                  />
+                ) : (
+                  <div
+                    className={cn(
+                      imageClass,
+                      activeClass(index),
+                      'flex items-center justify-center bg-neutral-200 dark:bg-neutral-900 text-4xl font-bold text-yellow-500',
+                    )}
+                  >
+                    {experience.title}
+                  </div>
                 )}
-              />
+              </ProjectLink>
               {/* Invisible trigger div */}
               <div
                 ref={(el) => (triggerRefs.current[index] = el)}
@@ -136,5 +165,29 @@ const Experience = () => {
     </section>
   )
 }
+
+// Wraps project media in a link when the project has one
+const ProjectLink = ({
+  href,
+  title,
+  children,
+}: {
+  href: string
+  title: string
+  children: ReactNode
+}) =>
+  href ? (
+    <a
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label={title}
+      className='block'
+    >
+      {children}
+    </a>
+  ) : (
+    <>{children}</>
+  )
 
 export { Experience }

@@ -7,11 +7,11 @@ import { useLanguage } from '@/context/LanguageContext'
 export const Skills = () => {
   const { t } = useLanguage()
   const Info = t.Skills
-  const column1 = Info.slice(0, 4)
-  const column2 = Info.slice(4, 8)
-  const column3 = Info.slice(8, 10)
-  const column4 = Info.slice(10, 12)
-  const column5 = Info.slice(12, 13)
+  const column1 = Info.slice(0, 3)
+  const column2 = Info.slice(3, 7)
+  const column3 = Info.slice(7, 9)
+  const column4 = Info.slice(9, 11)
+  const column5 = Info.slice(11, 13)
 
   return (
     <section
@@ -21,7 +21,6 @@ export const Skills = () => {
       <div className='mb-12'>
         <Subtitle text={t.Subtitles.skills} />
       </div>
-      {/* Mobile: 1 column, Tablet: 2 columns, Desktop: 3 columns */}
       <div className='flex flex-col md:flex-row gap-5'>
         <div className='flex-1 lg:max-w-sm space-y-5'>
           {column1.map((skill) => (

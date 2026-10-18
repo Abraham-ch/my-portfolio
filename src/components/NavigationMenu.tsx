@@ -30,7 +30,8 @@ const NavigationMenu = () => {
   const menuItems = [
     { id: 'about-me', label: t.Navigation.sections.main },
     { id: 'services', label: t.Navigation.sections.services },
-    { id: 'experience', label: t.Navigation.sections.experience },
+    { id: 'work', label: t.Navigation.sections.work },
+    { id: 'projects', label: t.Navigation.sections.projects },
     { id: 'skills', label: t.Navigation.sections.skills },
     { id: 'contact', label: t.Navigation.sections.contact },
   ]

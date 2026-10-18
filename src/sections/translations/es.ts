@@ -1,4 +1,5 @@
 import {
+  AttendanceService,
   BelcorpMvp,
   BessSolar,
   GaloissAcademy,
@@ -33,7 +34,71 @@ export const Services = [
   },
 ]
 
+export const WorkExperience = [
+  {
+    company: 'Aynitech',
+    role: 'Desarrollador de Software',
+    period: 'Ene 2026 — Actualidad',
+    highlights: [
+      'Desarrollo widgets y componentes reutilizables para crear dashboards interactivos de BI, desde el desarrollo hasta producción.',
+      'Adapto cada vista según el rol del usuario, para que cada persona vea solo la información que le corresponde.',
+      'Me encargo del QA con apoyo de IA en varios proyectos: uso IA para generar casos de prueba y escribo pruebas unitarias, de integración y end-to-end con Playwright, Supertest y Testcontainers.',
+    ],
+    stack: ['TypeScript', 'React', 'Playwright', 'Supertest', 'Testcontainers'],
+  },
+  {
+    company: 'JW Control',
+    role: 'Desarrollador Fullstack',
+    period: 'Nov 2024 — Sep 2025',
+    highlights: [
+      'Diseñé y desarrollé la landing page de JW Control con Astro y Sanity CMS, estilizada con Tailwind CSS, metadatos OpenGraph para redes sociales, desplegada en Vercel con dominio gestionado en Cloudflare.',
+      'Bess Solar: desarrollé una plataforma de e-commerce de energía solar con carrito de compras y un flujo de cotización automatizado vía email y WhatsApp, usando Remix, TypeScript, Tailwind CSS, Sanity como CMS headless y EmailJS.',
+      'Galoiss Academy: desarrollé un sistema de asistencia por escaneo de códigos QR con React y Vite, leyendo códigos desde la cámara del navegador para validar estudiantes, con backend en Node.js y Firebase, autenticación OAuth y reportes con Chart.js.',
+    ],
+    stack: [
+      'Astro',
+      'Remix',
+      'React',
+      'TypeScript',
+      'Sanity',
+      'Node.js',
+      'Firebase',
+      'Tailwind CSS',
+      'Vercel',
+      'Cloudflare',
+    ],
+  },
+  {
+    company: 'SkyTech Lima (Remoto)',
+    role: 'Desarrollador Frontend · Diseñador UI/UX',
+    period: 'Ene 2024 — Actualidad',
+    highlights: [
+      'Participé desde el inicio en el desarrollo y evolución de la startup, diseñando interfaces accesibles e intuitivas en Figma.',
+      'Construí el frontend con Remix y Vite, usando Tailwind CSS y shadcn/ui, con Sanity como CMS.',
+    ],
+    stack: ['Figma', 'Remix', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Sanity'],
+  },
+  {
+    company: 'Instituto ITS & Smart City Lima, Rímac',
+    role: 'Investigador',
+    period: 'Ago 2023 — Sep 2023',
+    highlights: [
+      'Presenté un dispositivo capaz de registrar parámetros meteorológicos para la recolección de datos en las regiones de Florida y Yambrasbamba, con el fin de evaluar el impacto ambiental y turístico.',
+    ],
+    stack: [],
+  },
+]
+
 export const Experiences = [
+  {
+    title: 'Attendance Service',
+    description:
+      'Una plataforma de asistencia escolar en tiempo real desarrollada con Rust, Axum y React. Permite registrar asistencias mediante códigos QR con validación de ubicación, sincronizar registros al instante mediante WebSockets y gestionar usuarios con autenticación JWT y permisos por roles. Incluye gráficos de asistencia y un modo demo con una escuela simulada, accesible desde un solo enlace.',
+    stack:
+      'Rust · Axum · PostgreSQL · sqlx · WebSockets · JWT · React 19 · TypeScript · React Router · Tailwind CSS · ECharts · WebAssembly · GitHub Actions · Vercel',
+    link: 'https://attendance-service-pearl.vercel.app/',
+    img: AttendanceService,
+  },
   {
     title: 'JW Control',
     description:
@@ -44,7 +109,7 @@ export const Experiences = [
   {
     title: 'Galoiss Academy',
     description:
-      'Desarrollé una plataforma de e-commerce completa para energía solar con funcionalidad de carrito de compras y sistema de cotización automatizado vía email y WhatsApp. Construido usando Remix, TypeScript y TailwindCSS, con Sanity como CMS headless y EmailJS para formularios de contacto. Desplegado en Vercel con dominio de Cloudflare.',
+      'Desarrollé un sistema de asistencia mediante escaneo de códigos QR con React y Vite, con acceso a la cámara desde el navegador para la lectura de códigos y validación de estudiantes. Backend implementado con Node.js y Firebase, autenticación OAuth, estilos con tailwindcss y visualización con Chart.js.',
     link: 'https://qr-assistance.vercel.app',
     img: GaloissAcademy,
   },
@@ -97,13 +162,23 @@ export const Skills = [
     title: 'Desarrollo Front-End',
     description:
       'Construcción de interfaces web atractivas y fáciles de usar utilizando frameworks y tecnologías modernas con experiencia.',
-    icons: ['HTML', 'JavaScript', 'TypeScript', 'React', 'NextJS'],
+    icons: [
+      'HTML',
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Astro',
+      'Remix',
+      'Vite',
+      'WebAssembly',
+      'Electron',
+    ],
   },
   {
     title: 'Desarrollo Back-End',
     description:
       'Desarrollo de lógica del lado del servidor robusta y APIs para impulsar aplicaciones web dinámicas y escalables.',
-    icons: ['Nodejs', 'Express'],
+    icons: ['Nodejs', 'Express', 'Rust', 'Firebase', 'Sanity'],
   },
   {
     title: 'Conceptos Fundamentales de Ciencias de la Computación',
@@ -132,7 +207,7 @@ export const Skills = [
     title: 'Estilos y Diseño',
     description:
       'Elaboración de diseños visualmente atractivos y responsivos con herramientas y frameworks de estilo avanzados.',
-    icons: ['CSS', 'Tailwindcss', 'MUI'],
+    icons: ['CSS', 'Tailwindcss', 'MUI', 'Shadcn', 'ECharts', 'Chartjs'],
   },
   {
     title: 'Animaciones Web',
@@ -144,13 +219,13 @@ export const Skills = [
     title: 'Nube y Despliegue',
     description:
       'Experiencia en despliegue y gestión de aplicaciones usando plataformas y herramientas de nube modernas.',
-    icons: ['Docker', 'Vercel'],
+    icons: ['Docker', 'Vercel', 'Cloudflare', 'GithubActions'],
   },
   {
     title: 'Pruebas y Depuración',
     description:
       'Asegurando la calidad y confiabilidad del código a través de procesos rigurosos de pruebas y depuración.',
-    icons: ['Jest', 'Postman'],
+    icons: ['Jest', 'Postman', 'Playwright', 'Testcontainers', 'Supertest'],
   },
   {
     title: 'Lenguajes de Programación',
@@ -228,7 +303,8 @@ export const Navigation = {
   sections: {
     main: 'Inicio',
     services: 'Servicios',
-    experience: 'Experiencia',
+    work: 'Trabajo',
+    projects: 'Proyectos',
     skills: 'Habilidades',
     contact: 'Contacto',
   },
@@ -236,6 +312,7 @@ export const Navigation = {
 
 export const Subtitles = {
   services: 'Servicios',
-  experience: 'Algo de mi experiencia reciente :)',
+  work: 'Experiencia laboral',
+  projects: 'Algunos de mis proyectos recientes :)',
   skills: 'Habilidades',
 }
