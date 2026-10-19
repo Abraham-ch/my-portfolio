@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form'
 
-import emailjs from '@emailjs/browser'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 
@@ -15,8 +14,6 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-const { VITE_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } = import.meta.env
-
 export const FormComponent = () => {
   const { toast } = useToast()
   const { t } = useLanguage()
@@ -25,26 +22,24 @@ export const FormComponent = () => {
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = (data: FormData) => {
-    const emailJSparams = {
-      from_name: data.name,
-      from_email: data.email,
-      message: data.message,
+  const onSubmit = async (data: FormData) => {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    }).catch(() => null)
+
+    if (!res?.ok) {
+      toast({ title: 'Error', variant: 'destructive', duration: 2500 })
+      return
     }
 
-    emailjs
-      .send(VITE_SERVICE_ID, VITE_TEMPLATE_ID, emailJSparams, VITE_PUBLIC_KEY)
-      .then(() => {
-        toast({
-          title: form.toastTitle,
-          description: form.toastDescription,
-          duration: 2500,
-        })
-        reset()
-      })
-      .catch((error) => {
-        alert(JSON.stringify(error))
-      })
+    toast({
+      title: form.toastTitle,
+      description: form.toastDescription,
+      duration: 2500,
+    })
+    reset()
   }
 
   return (
